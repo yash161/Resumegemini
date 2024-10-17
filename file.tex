@@ -1,0 +1,198 @@
+
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.1in, bottom=.1in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5.25pt}{5.25pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}\\
+\Huge{Yash Shah} \\[2pt]
+\href{https://github.com/yash161}{\raisebox{-0.05\height}\faGithub\ yash161} \ $|$
+\href{https://www.linkedin.com/in/yash-shah-b7129b1bb/}{\raisebox{-0.05\height}\faLinkedin\ yash-shah} \ $|$ \ 
+\href{mailto:yashshah3698@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ yashshah3698@gmail.com} \ $|$ \ 
+\href{tel:+12133018249}{\raisebox{-0.05\height}\faMobile \ 2133018249 (Open to Relocate)} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{California State University, Los Angeles, United States} & \hfill \color[HTML]{371e77} August 2024 - August 2026 \\
+\color[HTML]{371e77} M.S. in Computer Science & \hfill \color[HTML]{4B28A4}  \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Advanced AI, Advanced Software Engineering, Computer and Network Security}
+\end{tabularx}
+\setlength{\parskip}{2pt}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Ganpat University, Gujarat, India} & \hfill \color[HTML]{371e77} July 2019 - June 2023 \\
+\color[HTML]{371e77} B.Tech. in Computer Science \& Engineering (Cloud-Based Applications) & \hfill \color[HTML]{4B28A4} \textit{\textbf{CGPA: 8.99/10}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Cloud Computing, Machine Learning, Cloud Security, Data Mining \& Warehousing, Software Engineering, Computer Networks, Algorithm Design, Microservices, Virtualization, Operating Systems, DBMS, Data Structures, Compiler Design, IT Infrastructure Management, Web App Development}
+\end{tabularx}
+\vspace{-3mm}
+
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Squadron Technology, Ahmedabad} \hfill \color[HTML]{371e77} Aug 2022 - Jun 2024 \\[1pt]
+\color[HTML]{371e77}\textbf{\textit{Cloud Data and DevOps Engineer: Python, Azure, Docker, AWS, GitHub Actions, Terraform, Grafana}} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{Designed and implemented} a Python-based ETL tool integrated with Azure Blob Storage, enhancing data processing speed by \textbf{30\%} and improving real-time logistics tracking.
+\item \textbf{Optimized} a web scraping system with AWS and Docker, reducing data retrieval time by \textbf{50\%}, enabling high-accuracy insights for strategic planning.
+\item \textbf{Configured} a high-availability Percona XtraDB cluster with ProxySQL, reducing system downtime by \textbf{40\%} and ensuring consistent service delivery.
+\item \textbf{Built and automated} CI/CD pipelines using GitHub Actions and AWS CodePipeline, reducing deployment time by \textbf{70\%} and streamlining release cycles for iterative product delivery.
+\item \textbf{Implemented} real-time data streaming with Apache Kafka, increasing operational efficiency and achieving significant cost savings through optimized workflows.
+\end{itemize}
+\end{minipage}
+
+\end{tabularx}
+
+\vspace{5pt}
+
+\vspace{-1mm}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Squadron Technology, Ahmedabad} \hfill \color[HTML]{371e77} Jan 2022 - Jul 2022 \\[1pt]
+\color[HTML]{371e77}\textbf{\textit{Cloud Data and DevOps Intern: Python, AWS Lambda, DynamoDB, CI/CD Pipelines}} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{Developed} an automated hospital billing system in Python, increasing data management efficiency by \textbf{25\%} through optimized charge calculations and dummy data generation for testing.
+\item \textbf{Architected} a serverless solution with AWS Lambda and DynamoDB, streamlining data workflows while \textbf{automating deployments} with GitLab CI/CD pipelines, reducing release cycles by \textbf{60\%} and ensuring seamless feature updates.
+\end{itemize}
+\end{minipage}
+
+\end{tabularx}
+
+\vspace{2pt}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Ownux Infosec, Gujarat, India} \hfill \color[HTML]{371e77} May 2021 - Jun 2021 \\[1pt]
+\color[HTML]{371e77}\textbf{\textit{Software Development Intern: Flask, Python, Selenium, AWS}} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{Built} a Flask API to automate social media account verification, boosting task efficiency by \textbf{40\%} and enhancing user experience with seamless web automation using Selenium.
+\item \textbf{Deployed} the API on AWS ECS containers, ensuring scalable and reliable performance to meet increased user demands.
+\end{itemize}
+\end{minipage}
+
+\end{tabularx}
+
+\vspace{-6mm}
+
+
+\section{Project Work}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{\href{https://github.com/yash161/Acten3_Etl}{Acten3 ETL Pipeline Development (Jan 2024 – Mar 2024): Python, Dask, TigerGraph, Azure}} \\ Developed a scalable ETL pipeline leveraging Dask for efficient data validation and processing. Utilized TigerGraph for high-performance analytics and integrated Azure Blob Storage for optimized data management. Implemented automated data validation with Pydantic, generating comprehensive JSON reports to ensure data integrity. 
+\item \textbf{\href{https://github.com/yash161/Scrapper.git}{Web Scraper Optimization and Deployment on AWS ECS (Jan 2023 – Mar 2023): Python, AWS ECS, Terraform}} \\ Enhanced a web scraping application by utilizing Python's multiprocessing capabilities to scrape multiple sites concurrently, significantly decreasing data collection time while improving accuracy. Deployed the optimized scraper on AWS ECS using Terraform for automated infrastructure provisioning, ensuring scalable and reliable cloud performance.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+\vspace{-1mm}
+
+\vspace{-0.5mm}
+
+
+
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Programming Languages \& Tools:} Python, Go, Java, Golang, Terraform, AWS (Lambda, ECS), Azure (Blob Storage), Docker, GitHub Actions, MySQL, Kafka \\[1pt]
+\color[HTML]{1C033C}\textbf{Technologies:} Cloud Platforms (AWS, Azure), CI/CD Pipelines, DevOps Practices, Infrastructure as Code (IaC), Real-Time Data Processing, Data Structures and Algorithms \\[1pt]
+\color[HTML]{1C033C}\textbf{Databases:} MySQL, DynamoDB \\[1pt]
+\color[HTML]{1C033C}\textbf{Problem Solving:} Proven ability in developing automated ETL pipelines and optimizing data workflows \\[1pt]
+\vspace{-6mm}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Achievements}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+\item Finalist in the Odoo Hackathon, demonstrating problem-solving, innovation, and initiative in a fast-paced environment, aligned with proactive learning and growth. 
+\item Earned HashiCorp Terraform Associate certification on the first attempt, demonstrating proficiency in IaC for efficient cloud management and DevOps practices. Experienced in Java, Golang, Cloud, .NET, Python, and SQL. 
+\item Proficient in \textbf{Software Development}, \textbf{Software Implementation}, \textbf{Algorithms}, and \textbf{Data Structures}. 
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\end{document}

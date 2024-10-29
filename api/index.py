@@ -37,19 +37,98 @@ def extract_section(latex_code, section_name):
     return f"Error: {section_name} section not found."
 
 
-def tailor_section(api_key, section, job_description):
+def tailor_section(api_key, section, job_description,sec):
+    print(f"section is:{sec}")
+    # import sys
+    # print(f"section is:{section}")
+    # sys.exit(0)
     url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}'
     print(f"section is {section}")
     if not section.strip():
         return "Error: The provided section is empty."
-    if section=="Skills":
+    if section=="workex":
         print("Inside the skill section-----------------------------------------------------------------------------------------------------")
         prompt = {
             "contents": [
                 {
                     "parts": [
                         {
-                            "text": f"Tailor the {section} section to fit the job description: {job_description}. \nSection: {section} ensure all keywords are included in {section}  from the  {job_description} ,all keywords in {job_description}  should be included in {section} check it  and return only the latex code."
+                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 317 words"
+                        }
+                    ]
+                }
+            ]
+        }
+    else:
+         prompt = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions."
+                        }
+                    ]
+                }
+            ]
+        }
+    if section=="project":
+        print("Inside the skill section-----------------------------------------------------------------------------------------------------")
+        prompt = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 148  words"
+                        }
+                    ]
+                }
+            ]
+        }
+    else:
+         prompt = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions."
+                        }
+                    ]
+                }
+            ]
+        }
+    if section=="skills":
+        print("Inside the skill section-----------------------------------------------------------------------------------------------------")
+        prompt = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 76  words"
+                        }
+                    ]
+                }
+            ]
+        }
+    else:
+         prompt = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions."
+                        }
+                    ]
+                }
+            ]
+        }
+    if section=="ach":
+        print("Inside the skill section-----------------------------------------------------------------------------------------------------")
+        prompt = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": f"Tailor the {section} section to fit the job description: {job_description}. \nSection: {section} ensure all keywords are included in {section}  from the  {job_description} ,all keywords in {job_description}  should be included in {section} check it  and return only the latex code. and the whole sections should have atmost 96 words"
                         }
                     ]
                 }
@@ -126,10 +205,10 @@ def upload():
         return jsonify({"error": "Achievements section not found in LaTeX."}), 400
 
     # Tailor each section based on the job description
-    tailored_experience = tailor_section(GEMINI_API_KEY, work_experience_section, job_description)
-    tailored_projects = tailor_section(GEMINI_API_KEY, projects_section, job_description)
-    tailored_achievements = tailor_section(GEMINI_API_KEY, achievements_section, job_description)
-    tailored_skills= tailor_section(GEMINI_API_KEY, skills_section, job_description)
+    tailored_experience = tailor_section(GEMINI_API_KEY, work_experience_section, job_description,"workexp ")
+    tailored_projects = tailor_section(GEMINI_API_KEY, projects_section, job_description,"project")
+    tailored_achievements = tailor_section(GEMINI_API_KEY, achievements_section, job_description,"ach")
+    tailored_skills= tailor_section(GEMINI_API_KEY, skills_section, job_description,"skills")
     print("The exp is::",tailored_experience)
     print("----------------------------------------")
     # Create the final LaTeX document

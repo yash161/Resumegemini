@@ -53,7 +53,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 317 words and give me the latex format only "
+                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 317 words and give me the latex format only  dont give   ```latex'' string and   properly align margin and properly format the {sec} "
                         }
                     ]
                 }
@@ -65,7 +65,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only ."
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only dont give   ```latex'' string and properly align margin."
                         }
                     ]
                 }
@@ -78,7 +78,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 148  words  and give me the latex format only "
+                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 148  words  and give me the latex format only and proper align margin dont give   ```latex'' string and properly align margin "
                         }
                     ]
                 }
@@ -90,7 +90,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only ."
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only dont give   ```latex'' string and properly align margin."
                         }
                     ]
                 }
@@ -103,7 +103,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 76  words"
+                            "text": f"Tailor the {sec} section to fit the job description: {job_description}. \nSection: {sec} ensure all keywords are included in {sec}  from the  {job_description} ,all keywords in {job_description}  should be included in {sec} check it  and return only the latex code. and the whole sections should have atmost 76  words and properly align margin and give latex format only dont give   ```latex'' string" 
                         }
                     ]
                 }
@@ -115,7 +115,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only ."
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only dont give   ```latex'' string and properly align margin  ."
                         }
                     ]
                 }
@@ -128,7 +128,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Tailor the {section} section to fit the job description: {job_description}. \nSection: {section} ensure all keywords are included in {section}  from the  {job_description} ,all keywords in {job_description}  should be included in {section} check it  and return only the latex code. and the whole sections should have atmost 96 words  and give me the latex format only "
+                            "text": f"Tailor the {section} section to fit the job description: {job_description}. \nSection: {section} ensure all keywords are included in {section}  from the  {job_description} ,all keywords in {job_description}  should be included in {section} check it  and return only the latex code. and the whole sections should have atmost 96 words  and give me the latex format only dont give   ```latex'' string and properly align margin"
                         }
                     ]
                 }
@@ -140,7 +140,7 @@ def tailor_section(api_key, section, job_description,sec):
                 {
                     "parts": [
                         {
-                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only ."
+                            "text": f"Revise and tailor the '{section}' section to align closely with the provided job description: '{job_description}'. Ensure that all relevant keywords and phrases from the job description are incorporated seamlessly into the '{section}' content. Focus solely on integrating these keywords naturally and appropriately. Return only the final, tailored LaTeX code for the '{section}', and make no other changes or additions  and give me the latex format only dont give   ```latex'' string snd properly align margin."
                         }
                     ]
                 }

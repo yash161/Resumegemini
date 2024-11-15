@@ -1,7 +1,7 @@
 import requests
 import json
 
-# Set your API key here
+# Set your API key here in the file
 api_key = 'AIzaSyA4H3Rgyv_ycJYntgPa1y9BhzGGBKN8dNg'
 
 # Define the endpoint URL

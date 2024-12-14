@@ -8,7 +8,7 @@ import pprint
 app = Flask(__name__)
 
 # Set your Gemini API key here dsds
-GEMINI_API_KEY = 'AIzaSyDO7Lel7_O8J616TI9zcccOmZ1DXC0ZdKo'  # Replace with your actual API key
+GEMINI_API_KEY = 'AIzaSyDO7Lel7_O8J616TI9zcccOmZ1DXC0ZdKo'  # Replace with your actual API key o
 
 def validate_latex(latex_code):
     # Simple validation to check if basic LaTeX structure exists
